@@ -85,6 +85,11 @@ public class Main {
             System.out.println("before second thread: " + customer.getCounter());
             thread2.join();
             System.out.println("after all: " + customer.getCounter());
+            System.out.println(customer.hashCode());
+            customer.setName("Naya");
+            System.out.println(customer.hashCode());
+            customer.setName("jose");
+            System.out.println(customer.hashCode());
         }
     }
 }
